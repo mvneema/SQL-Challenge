@@ -2,7 +2,7 @@
 Posting all the SQL practice solutions for #100daysofcode challenge
 ### WEEK 1 
 1. Given the tables above, select the top 3 departments with at least ten employees and rank them according to the percentage of their employees making over 100K in salary.
-<img src="../_asset/employees_salaries.PNG" />
+
 ![employees_salaries](https://user-images.githubusercontent.com/7839090/149487374-2029285a-a8ad-434e-b663-57d566e0d948.PNG)
 
 ```
@@ -18,6 +18,8 @@ ORDER BY 1 DESC LIMIT 2;
 ```
 
 2. Given a table of students and their SAT test scores, write a query to return the two students with the closest test scores with the score difference.If there are multiple students with the same minimum score difference, select the student name combination that is higher in the alphabet. 
+![close sat scores](https://user-images.githubusercontent.com/7839090/149487846-9eced7c8-339c-41f8-8f58-a482b0f2abe0.PNG)
+
 ```
 SELECT 
     s1.student AS student1
@@ -31,6 +33,8 @@ LIMIT 1;
 ```
 
 3. Write a query that calculates the difference between the highest salaries found in the marketing and engineering departments. Output just the absolute difference in salaries.
+![salary differences](https://user-images.githubusercontent.com/7839090/149487881-65eaf664-9fe6-456b-987a-951dbd2ee572.PNG)
+
 ```
 SELECT
   ABS(
@@ -41,6 +45,8 @@ SELECT
 4. Acceptance Rate by Date:
 What is the overall friend acceptance rate by date? Your output should have the rate of acceptances by the date the request was sent. Order by the earliest date to latest.
 Assume that each friend request starts by a user sending (i.e., user_id_sender) a friend request to another user (i.e., user_id_receiver) thats logged in the table with action = 'sent'. If the request is accepted, the table logs action = 'accepted'. If the request is not accepted, no record of action = 'accepted' is logged.
+![acceptance rate](https://user-images.githubusercontent.com/7839090/149487905-51cbf177-ddcf-4855-bb42-490b14171484.PNG)
+
 
 ```
 SELECT 
@@ -61,6 +67,8 @@ AND a.user_id_receiver=b.user_id_receiver;
 
 5. Highest Energy Consumption: 
 Find the date with the highest total energy consumption from the Meta/Facebook data centers. Output the date along with the total energy consumption across all data centers.
+![high consumption](https://user-images.githubusercontent.com/7839090/149487944-7a0e8bfc-58fd-49ea-a226-72c3e4c7aff2.PNG)
+
 ```
 WITH union_cte AS (
 SELECT *
@@ -83,6 +91,7 @@ SELECT * FROM totals WHERE total_consumption = (SELECT MAX(total_consumption) FR
 Find the popularity percentage for each user on Meta/Facebook. The popularity percentage is defined as the total number of friends the user has divided by the total number of users on the platform, then converted into a percentage by multiplying by 100.
 Output each user along with their popularity percentage. Order records in ascending order by user id.
 The 'user1' and 'user2' column are pairs of friends.
+![facebook_friends](https://user-images.githubusercontent.com/7839090/149488122-80ea96b7-0a6e-4d86-ae41-190f96848695.PNG)
 
 Hint:
 
