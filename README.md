@@ -2,7 +2,7 @@
 Posting all the SQL practice solutions for #100daysofcode challenge
 ### WEEK 1 
 1. Given the tables above, select the top 3 departments with at least ten employees and rank them according to the percentage of their employees making over 100K in salary.
-<img src="/assets/img/MarineGEO_logo.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+<img src="../employess salaries.png" style="height: 100px; width:100px;"/>
 ```
 SELECT
   SUM(CASE WHEN a.salary > 100000 THEN 1 ELSE 0) / COUNT(DISTINCT a.id) AS perc_100k,
