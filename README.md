@@ -1,6 +1,6 @@
 # SQL-Challenge
 Posting all the SQL practice solutions for #100daysofcode challenge
-### WEEK 1 
+
 1. Given the tables above, select the top 3 departments with at least ten employees and rank them according to the percentage of their employees making over 100K in salary.
 
 ![employees_salaries](https://user-images.githubusercontent.com/7839090/149487374-2029285a-a8ad-434e-b663-57d566e0d948.PNG)
